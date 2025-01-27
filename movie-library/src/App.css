@@ -1,0 +1,115 @@
+/* Dark theme styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  background-color: #121212;
+}
+
+.App-header {
+  padding: 20px;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+/* Movie list */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-bottom: 2px solid #444;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Responsive Design */
+
+/* Mobile view (smaller screens) */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* More compact grid */
+  }
+
+  .movie-card {
+    margin: 0 10px;
+  }
+
+  .movie-info h3 {
+    font-size: 1rem;
+  }
+
+  .movie-info p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small screens (mobile) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .movie-list {
+    grid-template-columns: 1fr; /* Single column layout for small mobile screens */
+  }
+
+  .movie-card {
+    margin: 10px 0;
+  }
+
+  .movie-info h3 {
+    font-size: 1rem;
+  }
+
+  .movie-info p {
+    font-size: 0.75rem;
+  }
+}
